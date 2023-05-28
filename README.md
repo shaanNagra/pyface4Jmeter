@@ -6,6 +6,3 @@ A python interface to create jmeter scripts in JMX format
 > jmeter scripts. The project was archived back in 2021.
 
 ## Version Requirements
-As of `python3.9` module `xlm.etree.ElementTree` has removed `getchildren()` </br>
-The code base has not yet made the change.
-
