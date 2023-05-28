@@ -15,26 +15,35 @@ every component was required for our use. The list below shows the currently    
 implemented components.
 
 ### Samplers
-#### [JSR223 Sampler](https://jmeter.apache.org/usermanual/component_reference.html#JSR223_Sampler)
+*  [JSR223 Sampler](https://jmeter.apache.org/usermanual/component_reference.html#JSR223_Sampler)
 
 ### Logic Controllers
+* [Simple Controller](https://jmeter.apache.org/usermanual/component_reference.html#Simple_Controller)
+* [Once Only Controller](https://jmeter.apache.org/usermanual/component_reference.html#Once_Only_Controller)
+* [Random Controller](https://jmeter.apache.org/usermanual/component_reference.html#Random_Controller)
+* [Module Controller](https://jmeter.apache.org/usermanual/component_reference.html#Module_Controller)
 
 ### Listeners
-
+* No Listeners have been implemented yet.
 ### Cofiguration Elements
-
+* No Configuration Elements have been implemented yet.
 ### Assertations
-
+* No Assertation Elements have been implemented yet.
 ### Timers
+* [Uniform Random Timer](https://jmeter.apache.org/usermanual/component_reference.html#Uniform_Random_Timer)
 
 ### Pre Processors
-
+* No Pre Processors have been implemented yet.
 ### Post Processors
-
+* No Post Processors have been implemented yet.
 ### Miscelaneous Features
+* [Test Plan](https://jmeter.apache.org/usermanual/component_reference.html#Test_Plan)
+* [Thread Group](https://jmeter.apache.org/usermanual/component_reference.html#Thread_Group)
+* [Test Fragment](https://jmeter.apache.org/usermanual/component_reference.html#Test_Fragment)
 
 ### Extensions
 
 Components that are extensions for Jmeter
 
 #### Logic Controllers
+* [Blazemeters Weighted Switch Controller]()
