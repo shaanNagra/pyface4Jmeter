@@ -5,6 +5,7 @@
 # /////////////////////////////////////////////////
 
 
+
 TEST_PLAN =  '<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="LOGINAPPTESTPLAN" enabled="true">'\
       '<stringProp name="TestPlan.comments"></stringProp>'\
       '<boolProp name="TestPlan.functional_mode"></boolProp>'\
