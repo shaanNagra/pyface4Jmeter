@@ -4,8 +4,8 @@
 import lxml.etree as ET
 
 # INTERNAL IMPORTS
-from jmx_api.internal.base_element import BaseElem
-from jmx_api.internal.constants import (BZM_WEIGHTED_SWITCH_CONTROLLER,
+from jmx_inf.internal.base_element import BaseElem
+from jmx_inf.internal.constants import (BZM_WEIGHTED_SWITCH_CONTROLLER,
                                         SIMPLE_CONTROLLER,
                                         RANDOM_CONTROLLER,
                                         ONCE_ONLY_CONTROLLER,
