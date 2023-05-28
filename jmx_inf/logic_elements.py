@@ -11,21 +11,46 @@ from jmx_inf.internal.constants import (BZM_WEIGHTED_SWITCH_CONTROLLER,
                                         ONCE_ONLY_CONTROLLER,
                                         MODULE_CONTROLLER)
 
-# ////////////////FILE DESCRIPTION/////////////////
-#
-# /////////////////////////////////////////////////
+"""This module contains classes for some JMX logical controllers. 
+
+Classes: 
+    WeightedSwitchController:
+    SimpleController:
+    RandomController:
+    OnceOnlyContoller:
+    ModuleController:
 
 
+"""
 
-# ------------------------------------------
-#
-# ------------------------------------------
+
 class WeightedSwitchController(BaseElem):
+    """The JMX Element for the Weighted Switch Controller.
+    
+    The weighted switch controller is a JMeter extension created by 
+    https://www.blazemeter.com/. The weighted switch controller allows users to 
+    define probability value of the subelements.
+    SRC: https://github.com/Blazemeter/jmeter-bzm-plugins/tree/master/wsc
+
+
+    Attributes:
+        name: the name value of the JMX Elemnt (default 'wsc')
+
+    Methods:
+        addCase(caseName, weight): adds switch case to controller with given weight
+    """
     def __init__(self, name='wsc'):
         # self.cases = list(dict())
         super().__init__(BZM_WEIGHTED_SWITCH_CONTROLLER, name)
 
+
     def addCase(self, caseName, weight):
+        """Add case to list with given probability
+
+        Parameters:
+            caseName: the name of the case (used as ID)
+            weight: the probability of case being selected (e.g. 75)
+        """
         collProp = ET.Element('collectionProp', name=caseName+'Props')
 
         nameProp = ET.Element('stringProp', name=caseName+"Name")
