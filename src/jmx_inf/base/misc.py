@@ -38,9 +38,10 @@ class TestPlan(BaseElem):
 
 class threadGroup(BaseElem):
     def __init__(self, name='Thread Group'):
+        
         super().__init__(THREAD_GROUP, name)
 
-    def configTG_loopCount(self, count, infinite=False):
+    def config_loopCount(self, count, infinite=False):
 
         if infinite is False:
             newElem = ET.Element('stringProp', name='LoopController.loops')
@@ -66,11 +67,28 @@ class threadGroup(BaseElem):
         parent.remove(elem)
         return
 
-    def configTG_onSampleError(self):
+    def config_onSampleError(self, Action=0):
+        """Sets action to be taken after a Sampler error
 
-        return
+        Parameters:
+            Action: Flag of which action to select. (0 = Continue ,
+            1 = Start Next Thread Loop, 2 = Stop Thread, 3 = Stop Test,
+            4 = Stop Test Now)
 
-    def configTG_Lifetime(self, toggle=False, Duration="", StartupDelay=""):
+        Returns:
+            Boolean: True if action was set
+        """
+        selectable = ['continue','startnextloop','stopthread',
+                      'stoptest','stoptestnow']
+        if 0 <= Action < len(selectable):
+            on_sample_err_prop = self.Element.find(
+                './/stringProp[@name="ThreadGroup.on_sample_error"]'
+                )
+            on_sample_err_prop.text = selectable[Action]
+            return True
+        return False
+
+    def config_Lifetime(self, toggle=False, Duration="", StartupDelay=""):
         schedElem = self.Element.find(
             './/boolProp[@name="ThreadGroup.scheduler"]'
             )
@@ -86,7 +104,7 @@ class threadGroup(BaseElem):
             delayElem.text = str(StartupDelay)
         return
 
-    def configTG_other(self, sameUserOnIter=False, numThreads=1, rampTime=1):
+    def config_other(self, sameUserOnIter=False, numThreads=1, rampTime=1):
         numThreadsElem = self.Element.find(
             './/stringProp[@name="ThreadGroup.num_threads"]'
             )
@@ -98,7 +116,6 @@ class threadGroup(BaseElem):
         rampTimeElem.text = str(rampTime)
         sameUserElem.text = self.Bool2Bool(sameUserOnIter)
         return
-
 
 
 class TestFragment(BaseElem):
