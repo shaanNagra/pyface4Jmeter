@@ -45,27 +45,3 @@ implemented components.
 
 Components that are extensions for Jmeter
 
-#### Logic Controllers
-* [Blazemeters Weighted Switch Controller]()
-
-
-
-
-
-
-
-## Todo
-
-1. Look into best way to set radioButton values
-
-## Contributing
-
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
-
-## License
-
-`pyface4jmeter` was created by Shaan Nagra. It is licensed under the terms of the Apache License 2.0 license.
-
-## Credits
-
-`pyface4jmeter` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).

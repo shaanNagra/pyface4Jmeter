@@ -11,7 +11,7 @@ from .internal.constants import HASH_TREE
 # /////////////////////////////////////////////////
 
 class JmeterTestPlan:
-    """The Class that represents the JMeter Element 'Test Plan'.
+    """The Class that represents the JMeter Element 'Wrapper'.
 
     Attributes: 
         version:

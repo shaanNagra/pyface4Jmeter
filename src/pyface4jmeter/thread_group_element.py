@@ -17,6 +17,7 @@ from .internal.constants import THREAD_GROUP
 #
 # ------------------------------------------
 class threadGroup(BaseElem):
+    
     def __init__(self, name='Thread Group'):
         super().__init__(THREAD_GROUP, name)
 
