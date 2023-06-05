@@ -5,8 +5,8 @@
 # /////////////////////////////////////////////////
 
 
-from jmx_inf.internal.base_element import BaseElem
-from jmx_inf.internal.constants import TEST_FRAGMENT
+from .internal.base_element import BaseElem
+from .internal.constants import TEST_FRAGMENT
 
 
 # ------------------------------------------

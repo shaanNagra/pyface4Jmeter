@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 # INTERNAL IMPORTS
-from jmx_inf.internal.base_element import BaseElem
-from jmx_inf.internal.constants import THINK_TIME
+from .internal.base_element import BaseElem
+from .internal.constants import THINK_TIME
 
 # ////////////////FILE DESCRIPTION/////////////////
 #

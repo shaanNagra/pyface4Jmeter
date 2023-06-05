@@ -4,8 +4,8 @@
 import lxml.etree as ET
 
 # INTERNAL IMPORTS
-from jmx_inf.internal.base_element import BaseElem
-from jmx_inf.internal.constants import THREAD_GROUP
+from .internal.base_element import BaseElem
+from .internal.constants import THREAD_GROUP
 
 
 # ////////////////FILE DESCRIPTION/////////////////

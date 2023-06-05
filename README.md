@@ -45,5 +45,3 @@ implemented components.
 
 Components that are extensions for Jmeter
 
-#### Logic Controllers
-* [Blazemeters Weighted Switch Controller]()

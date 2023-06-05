@@ -4,8 +4,8 @@
 import lxml.etree as ET
 
 # INTERNAL IMPORTS
-from jmx_inf.internal.base_element import BaseElem
-from jmx_inf.internal.constants import (BZM_WEIGHTED_SWITCH_CONTROLLER,
+from .internal.base_element import BaseElem
+from .internal.constants import (BZM_WEIGHTED_SWITCH_CONTROLLER,
                                         SIMPLE_CONTROLLER,
                                         RANDOM_CONTROLLER,
                                         ONCE_ONLY_CONTROLLER,
@@ -44,6 +44,10 @@ class WeightedSwitchController(BaseElem):
         super().__init__(BZM_WEIGHTED_SWITCH_CONTROLLER, name)
 
 
+    # def addCase(self, caseElement, caseName, weights):
+    #     return
+
+        # addCaseWeights
     def addCase(self, caseName, weight):
         """Add case to list with given probability
 
