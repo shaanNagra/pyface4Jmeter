@@ -6,14 +6,7 @@ import lxml.etree as ET
 # INTERNAL IMPORTS
 from .constants import HASH_TREE
 
-# ////////////////FILE DESCRIPTION/////////////////
-#
-# /////////////////////////////////////////////////
 
-
-# ------------------------------------------
-#
-# ------------------------------------------
 class BaseElem:
     """The parent class for creating Jmeter elements.
 
@@ -23,6 +16,7 @@ class BaseElem:
         TempRoot: Temporary ElementTree to act as root to Element.
 
     Methods:
+        addSubElement(sub elem):
         append(Element): Appends Element as child to this one.
         get_elem(): Returns ElementTree Element.
         print(): Prints JMX of element.
@@ -43,13 +37,17 @@ class BaseElem:
         self.Element.addnext(ET.fromstring(HASH_TREE))
         pass
 
-    def append(self, elem):
+    def addSubElement(self, sub_elem):
+        self.append(sub_elem)
+        return
+
+    def append(self, sub_elem):
         """Appends given element as subelement.
 
         Parameter:
-            elem: The Element object to append as subelement.
+            sub_elem: The Element object to append as subelement.
         """
-        self.Element.getnext().extend(elem)
+        self.Element.getnext().extend(sub_elem)
         return
 
     def get_elem(self):

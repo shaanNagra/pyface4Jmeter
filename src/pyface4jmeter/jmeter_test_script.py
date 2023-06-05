@@ -4,7 +4,7 @@
 import lxml.etree as ET
 
 # INTERNAL IMPORTS
-from jmx_inf.internal.constants import HASH_TREE
+from .internal.constants import HASH_TREE
 
 # ////////////////FILE DESCRIPTION/////////////////
 #
